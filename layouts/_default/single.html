@@ -1,0 +1,42 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+
+<section class="section">
+  <div class="columns">
+    <div class="column is-three-fifths is-offset-one-fifth">
+
+      <article class="card" style="margin-bottom: 3rem;">
+        <div class="card-content">
+
+          <h1 class="title is-3">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h1>
+
+          <div class="content">
+            {{ .Content }}
+          </div>
+
+          <div class="columns is-mobile card-meta">
+            <div class="column has-text-left">
+              <span class="tag is-dark">
+
+                {{ if not .Date.IsZero }}
+                {{ .Date.Format "2006.01.02" }}
+                {{ end }}
+
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+{{ partial "footer.html" . }}

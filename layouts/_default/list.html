@@ -1,0 +1,53 @@
+{{ partial "header.html" . }}
+
+{{ partial "navbar.html" . }}
+
+<section class="section">
+  <div class="columns">
+    <div class="column is-three-fifths is-offset-one-fifth">
+
+      {{ range .Paginator.Pages }}
+      <article class="card" style="margin-bottom: 3rem;">
+        <div class="card-content">
+
+          <h1 class="title is-3">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h1>
+
+          <div class="content">
+            {{ .Summary }}
+          </div>
+
+          <div class="columns is-mobile card-meta" style="margin-top:1rem;">
+            <div class="column has-text-left">
+              <span class="tag is-dark">
+
+                {{ if not .Date.IsZero }}
+                    {{ .Date.Format "2006.01.02" }}
+                {{ end }}
+
+              </span>
+            </div>
+            <div class="column has-text-right">
+              <a href="#">Read More</a>
+            </div>
+          </div>
+
+        </div>
+      </article>
+      {{ end }}
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    {{ partial "pagination.html" .Paginator }}
+
+  </div>
+</section>
+
+
+{{ partial "footer.html" . }}
