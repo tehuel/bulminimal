@@ -1,0 +1,12 @@
+name = "Bulmin"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+description = "Minimal Blog Theme, using Bulma CSS"
+homepage = "https://tehuel.github.io/bulmin/"
+tags = []
+features = []
+min_version = "0.37.1"
+
+[author]
+  name = "Tehuel Torres Baldi"
+  homepage = "tehuel.blog"
