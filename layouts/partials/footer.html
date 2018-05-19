@@ -1,4 +1,11 @@
-<div class="container has-text-centered">
-  <p>&copy; {{ now.Format "2006" }} - {{ .Site.Title }} {{ .Site.Copyright }}</p>
-  <p><a href="https://github.com/tehuel/bulmin">Bulmin Theme</a> by <a href="https://molotec.com">Molotec</a></p>
+<div class="has-text-centered">
+
+    <p class="subtitle is-6">
+        {{ now.Format "2006" }} | {{ .Site.Copyright }}
+    </p>
+
+    <p class="subtitle is-6">
+        <a href="https://github.com/tehuel/bulmin">Bulmin Theme</a> by <a href="https://molotec.com">Molotec</a> | <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    </p>
+
 </div>
