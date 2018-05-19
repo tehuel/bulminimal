@@ -1,8 +1,9 @@
 <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
 
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <span>Bulmin</span>
+
+    <a href="{{ .Site.BaseURL }}" class="navbar-item is-size-5">
+      {{ .Site.Title }}
     </a>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -16,29 +17,12 @@
 
     <div class="navbar-start">
 
-      <a class="navbar-item" href="#">
-        Link
-      </a>
-
-      <a class="navbar-item" href="#">
-        Link
-      </a>
-
-    </div>
-
-    <div class="navbar-end">
-
-      <a class="navbar-item" href="#">
-        Link
-      </a>
-
-      <a class="navbar-item" href="#">
-        Link
-      </a>
-
-      <a class="navbar-item" href="#">
-        Link
-      </a>
+      <!-- Menu Links -->
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="navbar-item">
+          {{ .Name }}
+        </a>
+      {{end}}
 
     </div>
 
