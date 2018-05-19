@@ -1,42 +1,25 @@
-{{ partial "header.html" . }}
+{{ define "main" }}
 
-{{ partial "navbar.html" . }}
+  <article class="card" style="margin-bottom: 3rem;">
+    <div class="card-content">
 
+      <h1 class="title is-3" style="margin-bottom: 0;">
+        {{ .Title }}
+      </h1>
 
-<section class="section">
-  <div class="columns">
-    <div class="column is-three-fifths is-offset-one-fifth">
+      <div class="card-meta has-text-left" style="margin-bottom: 1rem;">
+        {{ if not .Date.IsZero }}
+          <p class="subtitle is-6 has-text-grey">
+            publicado {{ .Date.Format "2006.01.02" }}
+          </p>
+        {{ end }}
+      </div>
 
-      <article class="card" style="margin-bottom: 3rem;">
-        <div class="card-content">
-
-          <h1 class="title is-3">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          </h1>
-
-          <div class="content">
-            {{ .Content }}
-          </div>
-
-          <div class="columns is-mobile card-meta">
-            <div class="column has-text-left">
-              <span class="tag is-dark">
-
-                {{ if not .Date.IsZero }}
-                {{ .Date.Format "2006.01.02" }}
-                {{ end }}
-
-              </span>
-            </div>
-          </div>
-
-        </div>
-      </article>
+      <div class="content">
+        {{ .Content }}
+      </div>
 
     </div>
-  </div>
-</section>
+  </article>
 
-
-
-{{ partial "footer.html" . }}
+{{ end }}
