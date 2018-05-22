@@ -1,6 +1,9 @@
 {{ define "main" }}
 
-  {{ range .Paginator.Pages }}
+  {{ $mainSection := .Site.Params.mainSections | default (slice "posts") }}
+  {{ $paginator := .Paginate (where .Data.Pages "Type" "in" $mainSection) }}
+
+  {{ range $paginator.Pages }}
     <article class="card" style="margin-bottom: 4rem;">
       <div class="card-content">
 
@@ -28,6 +31,10 @@
 
       </div>
     </article>
+
+
   {{ end }}
+
+  {{ partial "pagination.html" $paginator }}
 
 {{ end }}

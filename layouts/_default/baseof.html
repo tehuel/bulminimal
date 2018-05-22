@@ -25,17 +25,6 @@
       </div>
     </section>
 
-    {{ if ne .Kind "page" }}
-    <!-- Pagination -->
-    <section class="section">
-      <div class="columns">
-        <div class="column is-half is-offset-one-quarter">
-          {{ partial "pagination.html" .Paginator }}
-        </div>
-      </div>
-    </section>
-    {{ end }}
-
     <!-- Footer -->
     <footer class="footer" style="margin-top: 6rem; padding: 6rem 0;">
       {{ partial "footer.html" . }}
