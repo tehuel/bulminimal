@@ -2,11 +2,11 @@
   <nav class="pagination is-centered" role="navigation" aria-label="pagination">
 
     {{ if .HasPrev }}
-      <a href="{{ .Prev.URL }}" class="pagination-previous button is-dark">Anterior</a>
+      <a href="{{ .Prev.URL }}" class="pagination-previous button is-dark">&laquo; Anterior</a>
     {{ end }}
 
     {{ if .HasNext }}
-      <a href="{{ .Next.URL }}" class="pagination-next button is-dark">Siguiente</a>
+      <a href="{{ .Next.URL }}" class="pagination-next button is-dark">Siguiente &raquo;</a>
     {{ end }}
 
   </nav>
