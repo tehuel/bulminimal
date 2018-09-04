@@ -1,6 +1,7 @@
 {{ define "main" }}
 
-  {{ $paginator := .Paginate .Data.Pages }}
+  {{ $mainSection := .Site.Params.mainSections | default (slice "posts") }}
+  {{ $paginator := .Paginate (where .Data.Pages "Type" "in" $mainSection) }}
 
   {{ range $paginator.Pages }}
     <article class="card" style="margin-bottom: 4rem;">
