@@ -4,9 +4,10 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ block "title" . }}{{- .Site.Title -}}{{ end }}</title>
+    <title>{{ block "title" . }}{{- .Title }} - {{ .Site.Title -}}{{ end }}</title>
 
-    <link rel="stylesheet" href="{{ "css/dark.css" | relURL }}">
+    {{ $style := resources.Get "bulmin.sass" | resources.ToCSS | resources.Minify }}
+    <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
 
   </head>
   <body>
@@ -25,7 +26,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer" style="margin-top: 6rem; padding: 6rem 0;">
+    <footer class="footer">
       {{ partial "footer.html" . }}
     </footer>
 
