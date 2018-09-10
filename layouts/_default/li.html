@@ -1,0 +1,27 @@
+<article class="card" style="margin-bottom: 4rem;">
+  <div class="card-content">
+
+    <h1 class="title is-3" style="margin-bottom: 0;">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h1>
+
+    <div class="card-meta has-text-left" style="margin-bottom: 2rem;">
+      {{ if not .Date.IsZero }}
+        <p class="subtitle is-6 has-text-grey">
+          publicado {{ .Date.Format "2006.01.02" }}
+        </p>
+      {{ end }}
+    </div>
+
+    <div class="content">
+      {{ .Summary }}
+    </div>
+
+    <div class="card-meta" style="margin-top:1rem;">
+      <div class="has-text-right">
+        <a href="{{ .RelPermalink }}" class="button is-dark">Leer Más</a>
+      </div>
+    </div>
+
+  </div>
+</article>
