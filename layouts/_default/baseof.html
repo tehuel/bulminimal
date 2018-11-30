@@ -4,6 +4,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="{{ .Site.BaseURL }}">
+
     <title>{{ block "title" . }}{{- .Title }} - {{ .Site.Title -}}{{ end }}</title>
 
     {{ $style := resources.Get "bulmin.sass" | resources.ToCSS | resources.Minify }}
