@@ -3,13 +3,11 @@
   {{ partial "section-title.html" . }}
 
   {{ $paginator := .Paginate .Data.Pages }}
-
   {{ range $paginator.Pages }}
 
     {{ .Render "li" }}
 
   {{ end }}
-
   {{ partial "pagination.html" $paginator }}
 
 {{ end }}
