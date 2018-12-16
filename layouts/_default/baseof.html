@@ -8,7 +8,7 @@
 
     <title>{{ block "title" . }}{{- .Title }} - {{ .Site.Title -}}{{ end }}</title>
 
-    {{ $style := resources.Get "bulmin.sass" | resources.ToCSS | resources.Minify }}
+    {{ $style := resources.Get "bulmin.sass" | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
 
   </head>

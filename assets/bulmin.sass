@@ -1,43 +1,44 @@
 @charset "utf-8"
 
-$white-text: #f2f2f2
-$white-highlight: #f4f4f4
-$white-mutted: #bcbcbc
+// get variables from Hugo config
+$bulminimal-primary: {{ .Site.Params.colors.primary }}
+$bulminimal-link: {{ .Site.Params.colors.link }}
+$bulminimal-text: {{ .Site.Params.colors.text }}
+$bulminimal-bg: {{ .Site.Params.colors.bg }}
 
+// Text Colors
+$text: $bulminimal-text
+$text-strong: lighten($bulminimal-text, 10%)
+$title-color: lighten($bulminimal-text, 10%)
+$subtitle-color: darken($bulminimal-text, 5%)
 
-$black-bg: #252525
-$gray-bg: #3c3c3c
-$gray-body-bg: #333
+// Primary Colors
+$primary: $bulminimal-primary
+$hr-background-color: $bulminimal-primary
 
+// Link Colors
+$secondary: $bulminimal-link
+$link: $bulminimal-link
+$link-hover: lighten($bulminimal-link, 10%)
 
-$red-bg: #a43232
-$red-text: #f44242
-$red-highlight: #ff2626
+// Background Colors
+$background: $bulminimal-bg
+$white: $bulminimal-bg
+$card-background-color: lighten($bulminimal-bg, 10%)
+$footer-background-color: desaturate(lighten($bulminimal-bg, 4%), 10%)
 
+@import "./bulma/bulma";
 
-$white: $gray-body-bg
-$background: $black-bg
-$text: $white-text
-$title-color: $white-highlight
-$title-strong-color: $white-highlight
-$subtitle-color: $white-mutted
-$subtitle-strong-color: $white-text
-$text-strong: $white-highlight
-$primary: $red-bg
-$link: $red-text
-$link-hover: $red-highlight
-$hr-background-color: $red-text
-$navbar-item-img-max-height: 2.5rem
-$navbar-item-color: $white-text
-$navbar-item-hover-background-color: $black-bg
-$card-background-color: $gray-bg
-$footer-background-color: $black-bg
-
+// Custom Theme Styles
 .card
-	margin-bottom: 3rem
+	margin-bottom: 4rem
+	.card-meta-top
+		margin-bottom: 1rem
+	.card-meta-bottom
+		margin-top: 1rem
+
 
 footer.footer
 	margin-top: 6rem
 	padding: 6rem 0
 
-@import "./bulma/bulma";
