@@ -1,15 +1,14 @@
 {{ define "main" }}
 
-  <article class="card" style="margin-bottom: 4rem;">
+  <article class="card">
     <div class="card-content">
 
-      <h1 class="title is-3" style="margin-bottom: 0;">
-        {{ .Title }}
-      </h1>
-
-      <div class="card-meta has-text-left" style="margin-bottom: 2rem;">
+      <div class="card-meta-top">
+        <h1 class="title is-3">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h1>
         {{ if not .Date.IsZero }}
-          <p class="subtitle is-6 has-text-grey">
+          <p class="subtitle is-6">
             publicado {{ .Date.Format "2006.01.02" }}
           </p>
         {{ end }}
