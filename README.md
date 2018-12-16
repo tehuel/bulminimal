@@ -1,14 +1,16 @@
-![Bulmin Logo](https://raw.githubusercontent.com/tehuel/bulmin/master/logo.png)
+![Bulminimal Logo](https://raw.githubusercontent.com/tehuel/bulminimal/master/logo.png)
 
-# bulmin
+# bulminimal
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 Minimal Bulma CSS blog theme for Hugo
 
-## TODO
+## Used By
 
-- Agregar JS a menu
-- Paginacion (completa, numeros de páginas)
-- Comentarios
-- Links Sociales en Pie
-- Tags y Categorias
-- i18n y l10n
+- [https://tehuel.blog](https://tehuel.blog) - My own Blog.
+- [https://torresbaldi.com](https://torresbaldi.com) - Website dedicated to amateur/hobby videogames development.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
