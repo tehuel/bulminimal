@@ -11,6 +11,8 @@
     {{ $style := resources.Get "bulmin.sass" | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
 
+    {{ partial "custom_header.html" . }}
+
   </head>
   <body>
 
@@ -31,6 +33,8 @@
     <footer class="footer">
       {{ partial "footer.html" . }}
     </footer>
+
+    {{ partial "custom_footer.html" . }}
 
   </body>
 </html>
