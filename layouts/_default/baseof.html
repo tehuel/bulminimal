@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="{{ .Site.BaseURL }}">
 
-    <title>{{ block "title" . }}{{- .Title }} - {{ .Site.Title -}}{{ end }}</title>
+    <title>
+      {{ block "title" . }}
+        {{ if .Page.IsHome }}
+          {{ .Site.Title -}}
+        {{ else }}
+          {{- .Title }} - {{ .Site.Title -}}
+        {{ end }}
+      {{ end }}
+    </title>
 
     {{ $style := resources.Get "bulmin.sass" | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
