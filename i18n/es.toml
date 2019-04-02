@@ -1,0 +1,17 @@
+[read_more]
+other = "Leer Más"
+
+[published_date]
+other = "Publicado el"
+
+[pagination_next]
+other = "Siguiente"
+
+[pagination_prev]
+other = "Anterior"
+
+[pagination_first]
+other = "Primero"
+
+[pagination_last]
+other = "Último"

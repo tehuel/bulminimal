@@ -7,7 +7,7 @@
       </h1>
       {{ if not .Date.IsZero }}
         <p class="subtitle is-6">
-          publicado {{ .Date.Format "2006.01.02" }}
+          {{ i18n "published_date" }} {{ .Date.Format "2006.01.02" }}
         </p>
       {{ end }}
     </div>
@@ -19,7 +19,7 @@
     <div class="card-meta-bottom">
       <div class="has-text-right">
         <a href="{{ .RelPermalink }}" class="button is-primary">
-          Leer Más
+          {{ i18n "read_more" }}
         </a>
       </div>
     </div>
