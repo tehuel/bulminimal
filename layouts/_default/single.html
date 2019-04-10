@@ -9,7 +9,7 @@
         </h1>
         {{ if not .Date.IsZero }}
           <p class="subtitle is-6">
-            publicado {{ .Date.Format "2006.01.02" }}
+            {{ i18n "published_date" }} {{ .Date.Format "2006.01.02" }}
           </p>
         {{ end }}
       </div>
