@@ -5,10 +5,10 @@ other = "Leer Más"
 other = "Publicado el"
 
 [pagination_next]
-other = "Siguiente"
+other = "Más Antiguos"
 
 [pagination_prev]
-other = "Anterior"
+other = "Más Recientes"
 
 [pagination_first]
 other = "Primero"
