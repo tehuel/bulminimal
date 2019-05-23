@@ -8,9 +8,7 @@
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </h1>
         {{ if not .Date.IsZero }}
-          <p class="subtitle is-6">
-            {{ i18n "published_date" }} {{ .Date.Format "2006.01.02" }}
-          </p>
+          <p class="subtitle is-6">{{ partial "date.html" . }}</p>
         {{ end }}
       </div>
 
