@@ -1,10 +1,10 @@
 @charset "utf-8"
 
 // get variables from Hugo config
-$bulminimal-primary: {{ .Site.Params.colors.primary }}
-$bulminimal-link: {{ .Site.Params.colors.link }}
-$bulminimal-text: {{ .Site.Params.colors.text }}
-$bulminimal-bg: {{ .Site.Params.colors.bg }}
+$bulminimal-primary: {{ .Site.Params.colors.primary | default "#333" }}
+$bulminimal-link: {{ .Site.Params.colors.link | default "#E44" }}
+$bulminimal-text: {{ .Site.Params.colors.text | default "#DDD" }}
+$bulminimal-bg: {{ .Site.Params.colors.bg | default "#222" }}
 
 // Text Colors
 $text: $bulminimal-text
