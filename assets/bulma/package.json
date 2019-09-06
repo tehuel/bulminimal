@@ -1,27 +1,27 @@
 {
-  "_from": "bulma@0.7.4",
-  "_id": "bulma@0.7.4",
+  "_from": "bulma@0.7.5",
+  "_id": "bulma@0.7.5",
   "_inBundle": false,
-  "_integrity": "sha512-krG2rP6eAX1WE0sf6O0SC/FUVSOBX4m1PBC2+GKLpb2pX0qanaDqcv9U2nu75egFrsHkI0zdWYuk/oGwoszVWg==",
+  "_integrity": "sha512-cX98TIn0I6sKba/DhW0FBjtaDpxTelU166pf7ICXpCCuplHWyu6C9LYZmL5PEsnePIeJaiorsTEzzNk3Tsm1hw==",
   "_location": "/bulma",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "bulma@0.7.4",
+    "raw": "bulma@0.7.5",
     "name": "bulma",
     "escapedName": "bulma",
-    "rawSpec": "0.7.4",
+    "rawSpec": "0.7.5",
     "saveSpec": null,
-    "fetchSpec": "0.7.4"
+    "fetchSpec": "0.7.5"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/bulma/-/bulma-0.7.4.tgz",
-  "_shasum": "7e74512e9118d9799021339e67e365ee0ac4f3f9",
-  "_spec": "bulma@0.7.4",
+  "_resolved": "https://registry.npmjs.org/bulma/-/bulma-0.7.5.tgz",
+  "_shasum": "35066c37f82c088b68f94450be758fc00a967208",
+  "_spec": "bulma@0.7.5",
   "_where": "/Users/jthomas/Desktop",
   "author": {
     "name": "Jeremy Thomas",
@@ -35,10 +35,10 @@
   "deprecated": false,
   "description": "Modern CSS framework based on Flexbox",
   "devDependencies": {
-    "autoprefixer": "^9.4.7",
-    "clean-css-cli": "^4.2.1",
-    "node-sass": "^4.11.0",
-    "postcss-cli": "^6.1.1",
+    "autoprefixer": "^9.5.1",
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.12.0",
+    "postcss-cli": "^6.1.2",
     "rimraf": "^2.6.3"
   },
   "files": [
@@ -74,5 +74,5 @@
   },
   "style": "bulma/css/bulma.min.css",
   "unpkg": "css/bulma.css",
-  "version": "0.7.4"
+  "version": "0.7.5"
 }
