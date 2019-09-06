@@ -1,7 +1,7 @@
 {{ define "main" }}
 
   {{ $mainSection := .Site.Params.mainSections }}
-  {{ $paginator := .Paginate (where .Data.Pages "Type" "in" $mainSection) }}
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" $mainSection) }}
   {{ range $paginator.Pages }}
 
     {{ .Render "li" }}
