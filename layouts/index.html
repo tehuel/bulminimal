@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-  {{ $mainSection := .Site.Params.mainSections | default (slice "posts") }}
+  {{ $mainSection := .Site.Params.mainSections }}
   {{ $paginator := .Paginate (where .Data.Pages "Type" "in" $mainSection) }}
   {{ range $paginator.Pages }}
 
